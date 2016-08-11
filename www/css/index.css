@@ -41,11 +41,31 @@ body {
     left:50%;
     top:50%;
     height:50px;                   /* text area height */
-    width:250px;                   /* text area width */
+    width:320px;                   /* text area width */
     text-align:center;
     padding:320px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-185px 0px 0px -125px;  /* offset vertical: half of image height and text area height */
+    margin:-200px 0px 0px -160px;  /* offset vertical: half of image height and text area height */
                                    /* offset horizontal: half of text area width */
+}
+
+#title-header {
+    font-size:42px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+	font-family:Carnevalee-Freakshow
+}
+
+#title-sub {
+    font-size:20px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+	font-family:Carnevalee-Freakshow
 }
 
 /* Landscape layout (with min-width) */
@@ -56,16 +76,6 @@ body {
         margin:-96px 0px 0px -198px;  /* offset vertical: half of image height */
                                       /* offset horizontal: half of image width and text area width */
     }
-}
-
-h1 {
-    font-size:36px;
-    font-weight:normal;
-    margin:0px;
-    overflow:visible;
-    padding:0px;
-    text-align:center;
-	font-family:Carnevalee-Freakshow
 }
 
 .event {
@@ -105,11 +115,6 @@ h1 {
     -webkit-animation:fade 3000ms infinite;
 }
 
-.regular-text {
-    font-size: 24px;
-    font-family:Carnevalee-Freakshow;
-}
-
 .setup {
     display: none;
 }
@@ -128,7 +133,9 @@ h1 {
     padding:10px 0px 0px 0px;
     margin:0px 0px 0px -125px;
 }
-#setup-description {
+.regular-text {
+    font-size: 24px;
+    font-family:Carnevalee-Freakshow;
     position:absolute;
     top:50%;
     left:50%;
@@ -150,7 +157,7 @@ h1 {
     left: 50%;
     top:100%;
     width: 240px;
-    margin: -25px 0px 0px -120px;
+    margin: -36px 0px 0px -120px;
     text-align: center;
 }
 
@@ -159,7 +166,7 @@ h1 {
     .page-heading {
         left:25%;
     }
-    #setup-description {
+    .regular-text {
         left: 25%;
         top: 50%;
         height: 300px;
@@ -182,7 +189,7 @@ h1 {
     margin: 8px;
     background: lightgray;
 }
-.tile.chosen {
+.tile.selected {
     background: green;
 }
 .tile.active {

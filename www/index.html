@@ -11,102 +11,33 @@
 </head>
 
 <body>
+    <h1 id="header" class="page-heading"></h1>
     <div id="title" class="title page">
-        <h1>Sons of Anarchy</h1>
+        <h1 id="title-header">Sons of Anarchy</h1>
+        <p id="title-sub">Solo variant companion app</p>
         <div id="deviceready" class="blink">
             <p class="event listening">Initializing...</p>
-            <p class="event received">Tap anywhere to continue</p>
         </div>
     </div>
     <div id="setup" class="setup page">
-        <h2 class="page-heading">Setup</h2>
         <div id="setup-description" class="regular-text">Set up the game as usual and place 2 enemy dudes on each of the following spaces:</div>
-        <table class="tiles">
-            <tr>
-                <td>
-                    <div id="tile1" class="tile active"></div>
-                </td>
-                <td>
-                    <div id="tile2" class="tile chosen"></div>
-                </td>
-                <td>
-                    <div id="tile3" class="tile chosen"></div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div id="tile4" class="tile inactive"></div>
-                </td>
-                <td>
-                    <div id="tile5" class="tile inactive"></div>
-                </td>
-                <td>
-                    <div id="tile6" class="tile inactive"></div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div id="tile7" class="tile inactive"></div>
-                </td>
-                <td>
-                    <div id="tile8" class="tile inactive"></div>
-                </td>
-                <td>
-                    <div id="tile9" class="tile inactive"></div>
-                </td>
-            </tr>
-        </table>
+        <div class="tile-div"></div>        
         <div class="continue blink">
             <p class="event">Tap anywhere to continue</p>
         </div>
     </div>
     <div id="game" class="game page">
-        <h2 id="page-heading" class="page-heading">TODO: Set from code</h2>
         <div id="page-description" class="regular-text">TODO: code this</div>
-        <div id="place-dudes" style="display:none">
-            <table class="tiles">
-                <tr>
-                    <td>
-                        <div id="tile1" class="tile active"></div>
-                    </td>
-                    <td>
-                        <div id="tile2" class="tile chosen"></div>
-                    </td>
-                    <td>
-                        <div id="tile3" class="tile chosen"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div id="tile4" class="tile inactive"></div>
-                    </td>
-                    <td>
-                        <div id="tile5" class="tile inactive"></div>
-                    </td>
-                    <td>
-                        <div id="tile6" class="tile inactive"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div id="tile7" class="tile inactive"></div>
-                    </td>
-                    <td>
-                        <div id="tile8" class="tile inactive"></div>
-                    </td>
-                    <td>
-                        <div id="tile9" class="tile inactive"></div>
-                    </td>
-                </tr>
-            </table>
-        </div>
+        <div id="place-dudes" class="tile-div" style="display:none"></div>
         <div id="story-card" style="display:none"></div>
-
-        <div class="continue blink">
-            <p class="event">Tap anywhere to continue</p>
-        </div>
     </div>
+
+    <div class="continue blink">
+        <p class="event">Tap anywhere to continue</p>
+    </div>
+
     <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/tiles.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/game.js"></script>
 </body>
