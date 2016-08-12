@@ -19,17 +19,16 @@
             <p class="event listening">Initializing...</p>
         </div>
     </div>
-    <div id="setup" class="setup page">
-        <div id="setup-description" class="regular-text">Set up the game as usual and place 2 enemy dudes on each of the following spaces:</div>
-        <div class="tile-div"></div>        
-        <div class="continue blink">
-            <p class="event">Tap anywhere to continue</p>
-        </div>
-    </div>
     <div id="game" class="game page">
         <div id="page-description" class="regular-text">TODO: code this</div>
         <div id="place-dudes" class="tile-div" style="display:none"></div>
-        <div id="story-card" style="display:none"></div>
+        <div id="story-card" style="display:none">
+            <img id="card-image"></img>
+            <p id="card-name">CARD-NAME</p>
+            <p id="traits">ABC - XYZ</p>
+            <p id="event-text">This is some text on the card</p>
+            <p id="flavor-text"><em>The flavor text on the card - Mad</em></p>
+        </div>
     </div>
 
     <div class="continue blink">
@@ -39,7 +38,8 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/tiles.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/game.js"></script>
+    <script type="text/javascript" src="js/pages.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>

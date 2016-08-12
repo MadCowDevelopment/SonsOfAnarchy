@@ -1,3 +1,8 @@
+var request = new XMLHttpRequest();
+request.open("GET", "js/cardset.json", false);
+request.send(null)
+var CARDSET = JSON.parse(request.responseText);
+
 function Page(id, title, activate) {
     this.id = id;
     this.title = title;
@@ -9,6 +14,11 @@ function Page(id, title, activate) {
         this.activate();
     }
 }
+
+function TitlePage() {
+    Page.call(this, "title", "", function () { });
+}
+TitlePage.prototype = Object.create(Page.prototype);
 
 function TilePage(title, text, activeTiles, selectedTiles) {
     this.activeTiles = [];
@@ -70,11 +80,17 @@ function TileGamePage(round) {
 }
 TileGamePage.prototype = Object.create(TilePage.prototype);
 
-function StoryPage(round) {
+function StoryPage(round, number) {
+    var card = CARDSET.Cards[number - 1];
     var activate = function () {
         showById('story-card');
         hideById('place-dudes');
+        document.getElementById('card-image').setAttribute('src', "cards/" + card.Number + ".png");
         document.getElementById('page-description').innerHTML = "Follow the card text:";
+        document.getElementById('card-name').innerHTML = card.Title;
+        document.getElementById('traits').innerHTML = card.Traits.reduce(function (a, b) { return a + " - " + b; });
+        document.getElementById('event-text').innerHTML = card.Text;
+        document.getElementById('flavor-text').innerHTML = card.FlavorText + " - " + card.FlavorCharacter;
     };
 
     Page.call(this, "game", "Round " + round, activate);

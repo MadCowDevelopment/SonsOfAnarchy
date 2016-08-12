@@ -115,9 +115,6 @@ body {
     -webkit-animation:fade 3000ms infinite;
 }
 
-.setup {
-    display: none;
-}
 .game {
     display: none;
 }
@@ -159,6 +156,37 @@ body {
     width: 240px;
     margin: -36px 0px 0px -120px;
     text-align: center;
+}
+#story-card {
+    display: block;
+    background:url(../img/template.png) no-repeat center top;
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:212px;
+    height:329px;
+    margin:-130px 0px 0px -106px;
+}
+
+#card-image {
+    position: absolute;
+    left:50%;
+    top:50%;
+    width:173px;
+    height:130px;
+    margin:-143px 0px 0px -86px;
+}
+#card-name {
+
+}
+#traits {
+
+}
+#event-text {
+    
+}
+#flavor-text {
+    
 }
 
 /* Landscape layout (with min-width) */

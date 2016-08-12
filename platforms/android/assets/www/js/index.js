@@ -26,8 +26,6 @@ var app = {
         var listeningElement = parentElement.querySelector('.listening');
 
         listeningElement.setAttribute('style', 'display:none;');
-
-        console.log('Received Event: ' + id);
     }
 };
 

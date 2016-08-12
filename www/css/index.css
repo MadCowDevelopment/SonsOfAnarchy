@@ -163,7 +163,8 @@ body {
     position:absolute;
     left:50%;
     top:50%;
-    padding:320px 0px 0px 40px;
+    width:212px;
+    height:329px;
     margin:-130px 0px 0px -106px;
 }
 
@@ -171,7 +172,21 @@ body {
     position: absolute;
     left:50%;
     top:50%;
-    margin:-170px 0px 0px -86px;
+    width:173px;
+    height:130px;
+    margin:-143px 0px 0px -86px;
+}
+#card-name {
+
+}
+#traits {
+
+}
+#event-text {
+    
+}
+#flavor-text {
+    
 }
 
 /* Landscape layout (with min-width) */

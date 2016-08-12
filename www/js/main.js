@@ -7,10 +7,10 @@ for (var index = 0; index < tileDivs.length; index++) {
 
 // Initialize pages
 var pages = [
-    new Page("title"),
+    new TitlePage(),
     new SetupPage(),
     new TileGamePage(1),
-    new StoryPage(1)];
+    new StoryPage(1, 1)];
 var pageIndex = 0;
 
 // Setup navigation event handlers
@@ -42,6 +42,6 @@ changePage = function (nextPage) {
     nextPage.show();
 }
 
-// nextPage();
-// nextPage();
-// nextPage();
+nextPage();
+nextPage();
+nextPage();
