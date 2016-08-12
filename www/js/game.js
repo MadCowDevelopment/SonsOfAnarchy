@@ -1,40 +1,69 @@
-function Page(id, title, initialize, activate) {
+function Page(id, title, activate) {
     this.id = id;
     this.title = title;
-    this.initialize = initialize;
     this.activate = activate;
     this.isInitialized = false;
 
+    this.show = function () {
+        this.activate();
+    }
+}
+
+function SetupPage() {
+    TilePage.call(this, "Setup", "Set up the game as usual and place 2 enemy dudes on each of the following spaces:", 3, 2);
+}
+SetupPage.prototype = Object.create(TilePage.prototype);
+
+function TilePage(title, text, activeTiles, selectedTiles) {
     this.activeTiles = [];
     this.selectedTiles = [];
 
-    this.show = function () {
-        if (!this.isInitialized) {
-            this.initialize(this.id);
-            this.isInitialized = true;
-        }
+    this.activeTiles = [1, 2, 3, 4, 5];
+    var random = Math.floor(Math.random() * 5) + 1;
+    this.selectedTiles.push(random);
 
-        this.activate(this.id);
-
+    var activate = function () {
+        showById('place-dudes');
+        hideById('story-card');
+        document.getElementById('page-description').innerHTML = text;
         for (var index = 0; index < this.activeTiles.length; index++) {
             var element = this.activeTiles[index];
-            activateTile(id, element);
+            activateTile(this.id, element);
         }
+
         for (var index = 0; index < this.selectedTiles.length; index++) {
             var element = this.selectedTiles[index];
-            selectTile(id, element);
+            selectTile(this.id, element);
         }
     }
 
-    this.showTiles = function () {
-        document.getElementById('place-dudes').setAttribute('style', 'display:block')
-        document.getElementById('story-card').setAttribute('style', 'display:none');
-    }
+    Page.call(this, "game", title, activate);
+}
+TilePage.prototype = Object.create(Page.prototype);
 
-    this.showStory = function () {
-        document.getElementById('place-dudes').setAttribute('style', 'display:none')
-        document.getElementById('story-card').setAttribute('style', 'display:block');
-    }
+function TileGamePage(round) {
+    TilePage.call(this, "Round " + round, "Place 1 dude on each of the highlighted tiles:", round * 2 + 3, 2);
+}
+TileGamePage.prototype = Object.create(TilePage.prototype);
+
+function StoryPage(round) {
+    var activate = function () {
+        showById('story-card');
+        hideById('place-dudes');
+        document.getElementById('page-description').innerHTML = "Follow the card text:";
+    };
+
+    Page.call(this, "game", "Round " + round, activate);
+
+}
+StoryPage.prototype = Object.create(Page.prototype);
+
+showById = function (id) {
+    document.getElementById(id).setAttribute('style', 'display:block');
+}
+
+hideById = function (id) {
+    document.getElementById(id).setAttribute('style', 'display:none');
 }
 
 var tileDivs = document.getElementsByClassName('tile-div')
@@ -44,21 +73,11 @@ for (var index = 0; index < tileDivs.length; index++) {
 }
 
 var pages = [
-    new Page("title", "", function (id) { }, function (id) { }),
-    new Page("setup", "Setup", function (id) {
-        this.activeTiles = [1, 2, 3];
-        var random = Math.floor(Math.random() * 3) + 1;
-        for (var index = 0; index < this.activeTiles.length; index++) {
-            var element = this.activeTiles[index];
-            if (element != random) this.selectedTiles.push(element);
-        }
-    }, function (id) { }),
-    new Page("game", "Round 1", function (id) {
-        this.activeTiles = [1, 2, 3, 4, 5];
-        var random = Math.floor(Math.random() * 5) + 1;
-        this.selectedTiles.push(random);
-        this.showTiles();
-    }, function (id) { })];
+    new Page("title"),
+    new SetupPage(),
+    new TileGamePage(1),
+    new StoryPage(1)];
+
 var pageIndex = 0;
 
 activateTile = function (id, num) {
@@ -120,3 +139,7 @@ updateBindings = function (page) {
     var title = document.getElementById("header");
     title.innerHTML = page.title;
 }
+
+nextPage();
+nextPage();
+nextPage();
