@@ -188,6 +188,19 @@ body {
     text-align: center;
     margin:-8px 0px 0px -85px;
 }
+#card-number {
+    color:white;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: Arial;
+    position: absolute;
+    left:50%;
+    top:50%;
+    width:18px;
+    height:14px;
+    text-align: center;
+    margin:-137px 0px 0px 88px;
+}
 #traits {
     position: absolute;
     font-weight: bold;

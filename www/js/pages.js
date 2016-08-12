@@ -100,6 +100,7 @@ function StoryPage(round, number) {
         hideById('place-dudes');
         document.getElementById('card-image').setAttribute('src', "cards/" + card.Number + ".png");
         document.getElementById('page-description').innerHTML = "Follow the card text:";
+        document.getElementById('card-number').innerHTML = card.Number;
         document.getElementById('card-name').innerHTML = card.Title;
         document.getElementById('traits').innerHTML = card.Traits.reduce(function (a, b) { return a + " - " + b; });
         document.getElementById('event-text').innerHTML = card.Text;

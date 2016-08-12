@@ -51,7 +51,3 @@ changePage = function (nextPage) {
     nextPageDiv.setAttribute('style', 'display:block;');
     nextPage.show();
 }
-
-// nextPage();
-// nextPage();
-// nextPage();
