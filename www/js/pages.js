@@ -26,7 +26,7 @@ function TilePage(title, text, numberOfActiveTiles, numberOfSelectedTiles) {
     this.activeTiles = [];
     this.selectedTiles = [];
 
-    if(numberOfActiveTiles > MAXIMUM_NUMBER_OF_TILES){
+    if (numberOfActiveTiles > MAXIMUM_NUMBER_OF_TILES) {
         numberOfActiveTiles = MAXIMUM_NUMBER_OF_TILES;
     }
 
@@ -39,8 +39,14 @@ function TilePage(title, text, numberOfActiveTiles, numberOfSelectedTiles) {
     for (var i = 0; i < selectedTiles.length; i++) {
         var element = selectedTiles[i];
         this.selectedTiles.push(element);
-    }    
+    }
 
+    resetTile = function (id, num) {
+        var tile = getTile(id, num);
+        tile.classList.remove("selected")
+        tile.classList.remove("activate");
+        tile.classList.add("inactive");
+    }
     activateTile = function (id, num) {
         var tile = getTile(id, num);
         tile.classList.remove("selected")
@@ -68,11 +74,13 @@ function TilePage(title, text, numberOfActiveTiles, numberOfSelectedTiles) {
         showById('place-dudes');
         hideById('story-card');
         document.getElementById('page-description').innerHTML = text;
+        for (var index = 0; index < MAXIMUM_NUMBER_OF_TILES; index++) {
+            resetTile(this.id, index + 1);
+        }
         for (var index = 0; index < this.activeTiles.length; index++) {
             var element = this.activeTiles[index];
             activateTile(this.id, element);
         }
-
         for (var index = 0; index < this.selectedTiles.length; index++) {
             var element = this.selectedTiles[index];
             selectTile(this.id, element);
