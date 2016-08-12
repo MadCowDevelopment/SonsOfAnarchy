@@ -98,6 +98,11 @@ function StoryPage(round, number) {
 }
 StoryPage.prototype = Object.create(Page.prototype);
 
+function GameEndPage() {
+    Page.call(this, "title", "GAME OVER", function () { })
+}
+GameEndPage.prototype = Object.create(Page.prototype);
+
 showById = function (id) {
     document.getElementById(id).setAttribute('style', 'display:block');
 }
