@@ -8,8 +8,7 @@ for (var index = 0; index < tileDivs.length; index++) {
 // Initialize pages
 var pages = [
     new TitlePage(),
-    new SetupPage(),
-    new TileGamePage(1)];
+    new SetupPage()];
 var pageIndex = 0;
 
 // Initialize story deck
