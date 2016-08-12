@@ -13,11 +13,11 @@ var pageIndex = 0;
 
 // Initialize story deck
 var numberofRounds = 12;
-var shuffledCards = CARDSET.Cards.sort(function () { return .5 - Math.random() });
-var selectedCards = shuffledCards.slice(0, numberofRounds).sort(function (a,b) { return a.Number - b.Number; });
+var shuffledCards = shuffle(CARDSET.Cards);
+var selectedCards = shuffledCards.slice(0, numberofRounds).sort(function (a, b) { return a.Number - b.Number; });
 for (var index = 0; index < selectedCards.length; index++) {
     var element = selectedCards[index];
-    pages.push(new TileGamePage(index+1));
+    pages.push(new TileGamePage(index + 1));
     pages.push(new StoryPage(index + 1, element.Number));
 }
 

@@ -5,7 +5,6 @@ var CARDSET = JSON.parse(request.responseText);
 
 const MAXIMUM_NUMBER_OF_TILES = 9;
 
-
 function Page(id, title, activate) {
     this.id = id;
     this.title = title;
@@ -35,10 +34,10 @@ function TilePage(title, text, numberOfActiveTiles, numberOfSelectedTiles) {
         this.activeTiles.push(i + 1);
     }
 
-    var shuffledActiveTiles = this.activeTiles.sort(function () { return .5 - Math.random() });
-    var selectedCards = shuffledActiveTiles.slice(0, numberOfSelectedTiles);
-    for (var i = 0; i < selectedCards.length; i++) {
-        var element = selectedCards[i];
+    var shuffledActiveTiles = shuffle(this.activeTiles);
+    var selectedTiles = shuffledActiveTiles.slice(0, numberOfSelectedTiles);
+    for (var i = 0; i < selectedTiles.length; i++) {
+        var element = selectedTiles[i];
         this.selectedTiles.push(element);
     }    
 
