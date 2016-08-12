@@ -3,6 +3,9 @@ request.open("GET", "js/cardset.json", false);
 request.send(null)
 var CARDSET = JSON.parse(request.responseText);
 
+const MAXIMUM_NUMBER_OF_TILES = 9;
+
+
 function Page(id, title, activate) {
     this.id = id;
     this.title = title;
@@ -20,13 +23,24 @@ function TitlePage() {
 }
 TitlePage.prototype = Object.create(Page.prototype);
 
-function TilePage(title, text, activeTiles, selectedTiles) {
+function TilePage(title, text, numberOfActiveTiles, numberOfSelectedTiles) {
     this.activeTiles = [];
     this.selectedTiles = [];
 
-    this.activeTiles = [1, 2, 3, 4, 5];
-    var random = Math.floor(Math.random() * 5) + 1;
-    this.selectedTiles.push(random);
+    if(numberOfActiveTiles > MAXIMUM_NUMBER_OF_TILES){
+        numberOfActiveTiles = MAXIMUM_NUMBER_OF_TILES;
+    }
+
+    for (var i = 0; i < numberOfActiveTiles; i++) {
+        this.activeTiles.push(i + 1);
+    }
+
+    var shuffledActiveTiles = this.activeTiles.sort(function () { return .5 - Math.random() });
+    var selectedCards = shuffledActiveTiles.slice(0, numberOfSelectedTiles);
+    for (var i = 0; i < selectedCards.length; i++) {
+        var element = selectedCards[i];
+        this.selectedTiles.push(element);
+    }    
 
     activateTile = function (id, num) {
         var tile = getTile(id, num);
