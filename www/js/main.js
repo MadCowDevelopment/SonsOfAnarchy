@@ -9,9 +9,12 @@ for (var index = 0; index < tileDivs.length; index++) {
 var pages = [
     new TitlePage(),
     new SetupPage(),
-    new TileGamePage(1),
-    new StoryPage(1, 1)];
+    new TileGamePage(1)];
 var pageIndex = 0;
+
+for(var i=0; i<23; i++) {
+    pages.push(new StoryPage(i+1, i+1));
+}
 
 // Setup navigation event handlers
 document.addEventListener("backbutton", onBackKeyDown, false);
@@ -42,6 +45,6 @@ changePage = function (nextPage) {
     nextPage.show();
 }
 
-nextPage();
-nextPage();
-nextPage();
+// nextPage();
+// nextPage();
+// nextPage();
