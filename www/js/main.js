@@ -1,5 +1,3 @@
-'use strict';
-
 // Initialize tile-div
 var tileDivs = document.getElementsByClassName('tile-div')
 for (var index = 0; index < tileDivs.length; index++) {
@@ -35,17 +33,17 @@ window.onclick = function () {
     nextPage();
 }
 
-var nextPage = function () {
+function nextPage() {
     if (pageIndex + 1 >= pages.length) return;
     changePage(pages[pageIndex + 1]);
     pageIndex++;
 }
-var previousPage = function () {
+function previousPage() {
     if (pageIndex == 0) return;
     changePage(pages[pageIndex - 1]);
     pageIndex--;
 }
-var changePage = function (nextPage) {
+function changePage(nextPage) {
     var currentPage = pages[pageIndex];
     var currentPageDiv = document.getElementById(currentPage.id);
     currentPageDiv.setAttribute('style', 'display:none');

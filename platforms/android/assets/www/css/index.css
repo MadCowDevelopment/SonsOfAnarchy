@@ -260,73 +260,7 @@ body {
         width:212px;
         height:329px;
         margin:-164px 0px 0px -106px;
-    }
-    #card-image {
-        position: absolute;
-        left:50%;
-        top:50%;
-        width:173px;
-        height:130px;
-        margin:-143px 0px 0px -86px;
-    }
-    #card-name {
-        color:white;
-        font-weight: bold;
-        font-size: 14px;
-        font-family: Arial;
-        position: absolute;
-        left:50%;
-        top:50%;
-        width:170px;
-        height:18px;
-        text-align: center;
-        margin:-8px 0px 0px -85px;
-    }
-    #card-number {
-        color:white;
-        font-weight: bold;
-        font-size: 12px;
-        font-family: Arial;
-        position: absolute;
-        left:50%;
-        top:50%;
-        width:18px;
-        height:14px;
-        text-align: center;
-        margin:-137px 0px 0px 87px;
-    }
-    #traits {
-        position: absolute;
-        font-weight: bold;
-        font-size: 10px;
-        left:50%;
-        top:50%;
-        width:170px;
-        height:16px;
-        text-align: center;
-        margin:18px 0px 0px -85px;
-    }
-    #event-text {
-        position: absolute;
-        font-size: 12px;
-        left:50%;
-        top:50%;
-        width:170px;
-        height:64px; 
-        padding:2px 2px 2px 2px;
-        text-align: center;
-        margin:34px 0px 0px -85px; 
-    }
-    #flavor-text {
-        position: absolute;
-        font-size: 8px;
-        left:50%;
-        top:50%;
-        width:170px;
-        height:36px;  
-        text-align: center;
-        margin:110px 0px 0px -85px;
-    }
+    } 
 }
 
 .tile {

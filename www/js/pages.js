@@ -1,11 +1,9 @@
-'use strict';
-
 var request = new XMLHttpRequest();
 request.open("GET", "js/cardset.json", false);
 request.send(null)
 var CARDSET = JSON.parse(request.responseText);
 
-const MAXIMUM_NUMBER_OF_TILES = 9;
+var MAXIMUM_NUMBER_OF_TILES = 9;
 
 function Page(id, title, activate) {
     this.id = id;
@@ -43,27 +41,27 @@ function TilePage(title, text, numberOfActiveTiles, numberOfSelectedTiles) {
         this.selectedTiles.push(element);
     }
 
-    var resetTile = function (id, num) {
+    function resetTile(id, num) {
         var tile = getTile(id, num);
         tile.classList.remove("selected")
         tile.classList.remove("activate");
         tile.classList.add("inactive");
     }
-    var activateTile = function (id, num) {
+    function activateTile(id, num) {
         var tile = getTile(id, num);
         tile.classList.remove("selected")
         tile.classList.remove("inactive");
         tile.classList.add("active");
     }
 
-    var selectTile = function (id, num) {
+    function selectTile(id, num) {
         var tile = getTile(id, num);
         tile.classList.remove("active")
         tile.classList.remove("inactive");
         tile.classList.add("selected");
     }
 
-    var getTile = function (id, num) {
+    function getTile(id, num) {
         var tilesContainer = document.getElementById(id);
         var allTiles = tilesContainer.getElementsByClassName("tile");
         for (var index = 0; index < allTiles.length; index++) {
@@ -72,18 +70,18 @@ function TilePage(title, text, numberOfActiveTiles, numberOfSelectedTiles) {
         }
     }
 
-    var activate = function () {
+    function activate() {
         showById('place-dudes');
         hideById('story-card');
         document.getElementById('page-description').innerHTML = text;
         for (var index = 0; index < MAXIMUM_NUMBER_OF_TILES; index++) {
             resetTile(this.id, index + 1);
         }
-        for (var index = 0; index < this.activeTiles.length; index++) {
+        for (index = 0; index < this.activeTiles.length; index++) {
             var element = this.activeTiles[index];
             activateTile(this.id, element);
         }
-        for (var index = 0; index < this.selectedTiles.length; index++) {
+        for (index = 0; index < this.selectedTiles.length; index++) {
             var element = this.selectedTiles[index];
             selectTile(this.id, element);
         }
@@ -105,7 +103,7 @@ TileGamePage.prototype = Object.create(TilePage.prototype);
 
 function StoryPage(round, number) {
     var card = CARDSET.Cards[number - 1];
-    var activate = function () {
+    function activate() {
         showById('story-card');
         hideById('place-dudes');
         document.getElementById('card-image').setAttribute('src', "cards/" + card.Number + ".png");
@@ -115,7 +113,7 @@ function StoryPage(round, number) {
         document.getElementById('traits').innerHTML = card.Traits.reduce(function (a, b) { return a + " - " + b; });
         document.getElementById('event-text').innerHTML = card.Text;
         document.getElementById('flavor-text').innerHTML = card.FlavorText + " - " + card.FlavorCharacter;
-    };
+    }
 
     Page.call(this, "game", "Round " + round, activate);
 
@@ -127,10 +125,10 @@ function GameEndPage() {
 }
 GameEndPage.prototype = Object.create(Page.prototype);
 
-var showById = function (id) {
+function showById(id) {
     document.getElementById(id).setAttribute('style', 'display:block');
 }
 
-var hideById = function (id) {
+function hideById(id) {
     document.getElementById(id).setAttribute('style', 'display:none');
 }
