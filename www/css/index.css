@@ -247,11 +247,20 @@ body {
 		margin:-150px 0px 0px -100px;
     }
     .tiles {
-    position: absolute;
-    left:50%;
-    top:50%;
-    margin:-127px 0px 0px -0px; 
+        position: absolute;
+        left:50%;
+        top:50%;
+        margin:-127px 0px 0px -0px; 
     }
+
+    #story-card {
+        position:absolute;
+        left:75%;
+        top:50%;
+        width:212px;
+        height:329px;
+        margin:-164px 0px 0px -106px;
+    } 
 }
 
 .tile {
