@@ -97,7 +97,7 @@ function SetupPage() {
 SetupPage.prototype = Object.create(TilePage.prototype);
 
 function TileGamePage(round) {
-    TilePage.call(this, "Round " + round, "Place 1 dude on each of the highlighted tiles:", round * 2 + 3, 2);
+    TilePage.call(this, "Round " + round, "Place 1 dude on each of the highlighted tiles:", round + 3, 2);
 }
 TileGamePage.prototype = Object.create(TilePage.prototype);
 
