@@ -1,3 +1,5 @@
+'use strict';
+
 var request = new XMLHttpRequest();
 request.open("GET", "js/cardset.json", false);
 request.send(null)
@@ -41,27 +43,27 @@ function TilePage(title, text, numberOfActiveTiles, numberOfSelectedTiles) {
         this.selectedTiles.push(element);
     }
 
-    resetTile = function (id, num) {
+    var resetTile = function (id, num) {
         var tile = getTile(id, num);
         tile.classList.remove("selected")
         tile.classList.remove("activate");
         tile.classList.add("inactive");
     }
-    activateTile = function (id, num) {
+    var activateTile = function (id, num) {
         var tile = getTile(id, num);
         tile.classList.remove("selected")
         tile.classList.remove("inactive");
         tile.classList.add("active");
     }
 
-    selectTile = function (id, num) {
+    var selectTile = function (id, num) {
         var tile = getTile(id, num);
         tile.classList.remove("active")
         tile.classList.remove("inactive");
         tile.classList.add("selected");
     }
 
-    getTile = function (id, num) {
+    var getTile = function (id, num) {
         var tilesContainer = document.getElementById(id);
         var allTiles = tilesContainer.getElementsByClassName("tile");
         for (var index = 0; index < allTiles.length; index++) {
@@ -125,10 +127,10 @@ function GameEndPage() {
 }
 GameEndPage.prototype = Object.create(Page.prototype);
 
-showById = function (id) {
+var showById = function (id) {
     document.getElementById(id).setAttribute('style', 'display:block');
 }
 
-hideById = function (id) {
+var hideById = function (id) {
     document.getElementById(id).setAttribute('style', 'display:none');
 }

@@ -1,3 +1,5 @@
+'use strict';
+
 // Initialize tile-div
 var tileDivs = document.getElementsByClassName('tile-div')
 for (var index = 0; index < tileDivs.length; index++) {
@@ -11,7 +13,7 @@ var pages = [
     new SetupPage()];
 var pageIndex = 0;
 
-// Initialize story deck
+// Initialize remaining pages
 var numberofRounds = 12;
 var shuffledCards = shuffle(CARDSET.Cards);
 var selectedCards = shuffledCards.slice(0, numberofRounds).sort(function (a, b) { return a.Number - b.Number; });
@@ -33,17 +35,17 @@ window.onclick = function () {
     nextPage();
 }
 
-nextPage = function () {
+var nextPage = function () {
     if (pageIndex + 1 >= pages.length) return;
     changePage(pages[pageIndex + 1]);
     pageIndex++;
 }
-previousPage = function () {
+var previousPage = function () {
     if (pageIndex == 0) return;
     changePage(pages[pageIndex - 1]);
     pageIndex--;
 }
-changePage = function (nextPage) {
+var changePage = function (nextPage) {
     var currentPage = pages[pageIndex];
     var currentPageDiv = document.getElementById(currentPage.id);
     currentPageDiv.setAttribute('style', 'display:none');
