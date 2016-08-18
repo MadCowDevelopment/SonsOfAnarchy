@@ -14,7 +14,7 @@ function Page(id, title, activate) {
     this.show = function () {
         document.getElementById("header").innerHTML = this.title;
         this.activate();
-    }
+    };
 }
 
 function TitlePage() {
@@ -26,37 +26,44 @@ function TilePage(title, text, numberOfActiveTiles, numberOfSelectedTiles) {
     this.activeTiles = [];
     this.selectedTiles = [];
 
-    if (numberOfActiveTiles > MAXIMUM_NUMBER_OF_TILES) {
-        numberOfActiveTiles = MAXIMUM_NUMBER_OF_TILES;
+    initializeActiveTiles(this.activeTiles, numberOfActiveTiles);
+    initializeSelectedTiles(this.activeTiles, this.selectedTiles, numberOfSelectedTiles);
+
+    function initializeActiveTiles(activeTiles, numberOfActiveTiles) {
+        if (numberOfActiveTiles > MAXIMUM_NUMBER_OF_TILES) {
+            numberOfActiveTiles = MAXIMUM_NUMBER_OF_TILES;
+        }
+
+        for (var i = 0; i < numberOfActiveTiles; i++) {
+            activeTiles.push(i + 1);
+        }
     }
 
-    for (var i = 0; i < numberOfActiveTiles; i++) {
-        this.activeTiles.push(i + 1);
-    }
-
-    var shuffledActiveTiles = shuffle(this.activeTiles);
-    var selectedTiles = shuffledActiveTiles.slice(0, numberOfSelectedTiles);
-    for (var i = 0; i < selectedTiles.length; i++) {
-        var element = selectedTiles[i];
-        this.selectedTiles.push(element);
+    function initializeSelectedTiles(activeTiles, selectedTiles, numberOfSelectedTiles) {
+        var shuffledActiveTiles = shuffle(activeTiles);
+        var tilesToSelect = shuffledActiveTiles.slice(0, numberOfSelectedTiles);
+        for (var i = 0; i < tilesToSelect.length; i++) {
+            var element = tilesToSelect[i];
+            selectedTiles.push(element);
+        }
     }
 
     function resetTile(id, num) {
         var tile = getTile(id, num);
-        tile.classList.remove("selected")
+        tile.classList.remove("selected");
         tile.classList.remove("activate");
         tile.classList.add("inactive");
     }
     function activateTile(id, num) {
         var tile = getTile(id, num);
-        tile.classList.remove("selected")
+        tile.classList.remove("selected");
         tile.classList.remove("inactive");
         tile.classList.add("active");
     }
 
     function selectTile(id, num) {
         var tile = getTile(id, num);
-        tile.classList.remove("active")
+        tile.classList.remove("active");
         tile.classList.remove("inactive");
         tile.classList.add("selected");
     }
@@ -70,21 +77,34 @@ function TilePage(title, text, numberOfActiveTiles, numberOfSelectedTiles) {
         }
     }
 
+    function resetTiles(id) {
+        for (var index = 0; index < MAXIMUM_NUMBER_OF_TILES; index++) {
+            resetTile(id, index + 1);
+        }
+    }
+
+    function activateTiles(id, activeTiles) {
+        for (index = 0; index < activeTiles.length; index++) {
+            var element = activeTiles[index];
+            activateTile(id, element);
+        }
+    }
+
+    function selectTiles(id, selectedTiles) {
+        for (index = 0; index < selectedTiles.length; index++) {
+            var element = selectedTiles[index];
+            selectTile(id, element);
+        }
+    }
+
     function activate() {
         showById('place-dudes');
         hideById('story-card');
         document.getElementById('page-description').innerHTML = text;
-        for (var index = 0; index < MAXIMUM_NUMBER_OF_TILES; index++) {
-            resetTile(this.id, index + 1);
-        }
-        for (index = 0; index < this.activeTiles.length; index++) {
-            var element = this.activeTiles[index];
-            activateTile(this.id, element);
-        }
-        for (index = 0; index < this.selectedTiles.length; index++) {
-            var element = this.selectedTiles[index];
-            selectTile(this.id, element);
-        }
+
+        resetTiles(this.id);
+        activateTiles(this.id, this.activeTiles);
+        selectTiles(this.id, this.selectedTiles);
     }
 
     Page.call(this, "game", title, activate);
@@ -110,7 +130,7 @@ function StoryPage(round, number) {
         document.getElementById('page-description').innerHTML = "Follow the card text:";
         document.getElementById('card-number').innerHTML = card.Number;
         document.getElementById('card-name').innerHTML = card.Title;
-        document.getElementById('traits').innerHTML = card.Traits.join(" - " );
+        document.getElementById('traits').innerHTML = card.Traits.join(" - ");
         document.getElementById('event-text').innerHTML = card.Text;
         document.getElementById('flavor-text').innerHTML = card.FlavorText + " - " + card.FlavorCharacter;
     }
@@ -121,7 +141,7 @@ function StoryPage(round, number) {
 StoryPage.prototype = Object.create(Page.prototype);
 
 function GameEndPage() {
-    Page.call(this, "title", "GAME OVER", function () { })
+    Page.call(this, "title", "GAME OVER", function () { });
 }
 GameEndPage.prototype = Object.create(Page.prototype);
 

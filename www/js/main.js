@@ -1,5 +1,5 @@
 // Initialize tile-div
-var tileDivs = document.getElementsByClassName('tile-div')
+var tileDivs = document.getElementsByClassName('tile-div');
 for (var index = 0; index < tileDivs.length; index++) {
     var element = tileDivs[index];
     element.innerHTML = TILES;
@@ -32,7 +32,7 @@ function onBackKeyDown(event) {
 window.onclick = function () {
     if (!deviceReady) return;
     nextPage();
-}
+};
 
 function nextPage() {
     if (pageIndex + 1 >= pages.length) return;
@@ -40,7 +40,7 @@ function nextPage() {
     pageIndex++;
 }
 function previousPage() {
-    if (pageIndex == 0) return;
+    if (pageIndex === 0) return;
     changePage(pages[pageIndex - 1]);
     pageIndex--;
 }
