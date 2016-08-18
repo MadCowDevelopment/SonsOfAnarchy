@@ -13,7 +13,7 @@ var pageIndex = 0;
 
 // Initialize remaining pages
 var numberofRounds = 12;
-var shuffledCards = shuffle(CARDSET.Cards);
+var shuffledCards = utils.shuffle(CARDSET.Cards);
 var selectedCards = shuffledCards.slice(0, numberofRounds).sort(function (a, b) { return a.Number - b.Number; });
 for (var index = 0; index < selectedCards.length; index++) {
     var element = selectedCards[index];

@@ -40,7 +40,7 @@ function TilePage(title, text, numberOfActiveTiles, numberOfSelectedTiles) {
     }
 
     function initializeSelectedTiles(activeTiles, selectedTiles, numberOfSelectedTiles) {
-        var shuffledActiveTiles = shuffle(activeTiles);
+        var shuffledActiveTiles = utils.shuffle(activeTiles);
         var tilesToSelect = shuffledActiveTiles.slice(0, numberOfSelectedTiles);
         for (var i = 0; i < tilesToSelect.length; i++) {
             var element = tilesToSelect[i];
