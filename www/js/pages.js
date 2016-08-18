@@ -96,8 +96,8 @@ function SetupPage() {
 }
 SetupPage.prototype = Object.create(TilePage.prototype);
 
-function TileGamePage(round) {
-    TilePage.call(this, "Round " + round, "Place 1 dude on each of the highlighted tiles:", round + 3, 2);
+function TileGamePage(round, spawns) {
+    TilePage.call(this, "Round " + round, "Place 1 dude on each of the highlighted tiles:", round + 3, spawns);
 }
 TileGamePage.prototype = Object.create(TilePage.prototype);
 
@@ -110,7 +110,7 @@ function StoryPage(round, number) {
         document.getElementById('page-description').innerHTML = "Follow the card text:";
         document.getElementById('card-number').innerHTML = card.Number;
         document.getElementById('card-name').innerHTML = card.Title;
-        document.getElementById('traits').innerHTML = card.Traits.reduce(function (a, b) { return a + " - " + b; });
+        document.getElementById('traits').innerHTML = card.Traits.join(" - " );
         document.getElementById('event-text').innerHTML = card.Text;
         document.getElementById('flavor-text').innerHTML = card.FlavorText + " - " + card.FlavorCharacter;
     }

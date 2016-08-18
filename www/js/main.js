@@ -17,7 +17,8 @@ var shuffledCards = shuffle(CARDSET.Cards);
 var selectedCards = shuffledCards.slice(0, numberofRounds).sort(function (a, b) { return a.Number - b.Number; });
 for (var index = 0; index < selectedCards.length; index++) {
     var element = selectedCards[index];
-    pages.push(new TileGamePage(index + 1));
+    var spawns = Math.ceil((index + 1) / 4) + 1;
+    pages.push(new TileGamePage(index + 1, spawns));
     pages.push(new StoryPage(index + 1, element.Number));
 }
 
