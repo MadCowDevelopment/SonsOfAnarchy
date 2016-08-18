@@ -23,28 +23,30 @@ function TitlePage() {
 TitlePage.prototype = Object.create(Page.prototype);
 
 function TilePage(title, text, numberOfActiveTiles, numberOfSelectedTiles) {
+    var self = this;
     this.activeTiles = [];
     this.selectedTiles = [];
 
-    initializeActiveTiles(this.activeTiles, numberOfActiveTiles);
-    initializeSelectedTiles(this.activeTiles, this.selectedTiles, numberOfSelectedTiles);
+    initializeActiveTiles(numberOfActiveTiles);
+    initializeSelectedTiles(numberOfSelectedTiles);
 
-    function initializeActiveTiles(activeTiles, numberOfActiveTiles) {
+
+    function initializeActiveTiles(numberOfActiveTiles) {
         if (numberOfActiveTiles > MAXIMUM_NUMBER_OF_TILES) {
             numberOfActiveTiles = MAXIMUM_NUMBER_OF_TILES;
         }
 
         for (var i = 0; i < numberOfActiveTiles; i++) {
-            activeTiles.push(i + 1);
+            self.activeTiles.push(i + 1);
         }
     }
 
-    function initializeSelectedTiles(activeTiles, selectedTiles, numberOfSelectedTiles) {
-        var shuffledActiveTiles = utils.shuffle(activeTiles);
+    function initializeSelectedTiles(numberOfSelectedTiles) {
+        var shuffledActiveTiles = utils.shuffle(self.activeTiles);
         var tilesToSelect = shuffledActiveTiles.slice(0, numberOfSelectedTiles);
         for (var i = 0; i < tilesToSelect.length; i++) {
             var element = tilesToSelect[i];
-            selectedTiles.push(element);
+            self.selectedTiles.push(element);
         }
     }
 
@@ -77,23 +79,23 @@ function TilePage(title, text, numberOfActiveTiles, numberOfSelectedTiles) {
         }
     }
 
-    function resetTiles(id) {
+    function resetTiles() {
         for (var index = 0; index < MAXIMUM_NUMBER_OF_TILES; index++) {
-            resetTile(id, index + 1);
+            resetTile(self.id, index + 1);
         }
     }
 
-    function activateTiles(id, activeTiles) {
-        for (index = 0; index < activeTiles.length; index++) {
-            var element = activeTiles[index];
-            activateTile(id, element);
+    function activateTiles() {
+        for (index = 0; index < self.activeTiles.length; index++) {
+            var element = self.activeTiles[index];
+            activateTile(self.id, element);
         }
     }
 
-    function selectTiles(id, selectedTiles) {
-        for (index = 0; index < selectedTiles.length; index++) {
-            var element = selectedTiles[index];
-            selectTile(id, element);
+    function selectTiles() {
+        for (index = 0; index < self.selectedTiles.length; index++) {
+            var element = self.selectedTiles[index];
+            selectTile(self.id, element);
         }
     }
 
@@ -102,9 +104,9 @@ function TilePage(title, text, numberOfActiveTiles, numberOfSelectedTiles) {
         hideById('story-card');
         document.getElementById('page-description').innerHTML = text;
 
-        resetTiles(this.id);
-        activateTiles(this.id, this.activeTiles);
-        selectTiles(this.id, this.selectedTiles);
+        resetTiles();
+        activateTiles();
+        selectTiles();
     }
 
     Page.call(this, "game", title, activate);
