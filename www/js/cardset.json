@@ -77,7 +77,7 @@
       "Number": 10,
       "Title": "Better Half",
       "Traits": [ "Threat", "Law enforcement" ],
-      "Text": "ATF raids Cara Cara. You cannot extort money from any location.",
+      "Text": "ATF raids Cara Cara. You cannot skim money from any location.",
       "FlavorText": "I'm gonna bury these assholes.",
       "FlavorCharacter": "Agent Stahl"
     },
@@ -101,7 +101,7 @@
       "Number": 13,
       "Title": "The Revelator",
       "Traits": [ "Threat", "Sons of Anarchy" ],
-      "Text": "Piney wants to take revenge for Donna's death. Commit 3 dudes (2+ members) and pay 3$ or lose 1 member and 1 prospect.",
+      "Text": "Piney wants to take revenge for Donna's death. Commit 2 dudes (1+ members) and pay 3$ or lose 1 member and 1 prospect.",
       "FlavorText": "The Niners came gunning for my son. They killed my daughter-in-law.",
       "FlavorCharacter": "Piney"
     },
@@ -109,7 +109,7 @@
       "Number": 14,
       "Title": "Albification",
       "Traits": [ "Threat", "L.O.A.N." ],
-      "Text": "Gemma gets gang raped by AJ Weston and his associates. Lose 5$.",
+      "Text": "Gemma gets gang raped by AJ Weston and his associates. To cover it up she crashes her car. Lose 5$.",
       "FlavorText": "So why don't you just climb back into your little German clown car and drive back to Nazi town...",
       "FlavorCharacter": "Clay"
     },
@@ -117,7 +117,7 @@
       "Number": 15,
       "Title": "Small Tears",
       "Traits": [ "Threat", "Georgie Caruso" ],
-      "Text": "Georgie Caruso is threatening the girls at Cara Cara into working for him. Fight 4 of his henchmen or lose 5$.",
+      "Text": "Georgie Caruso is threatening the girls at Cara Cara into working for him. Fight 3 of his henchmen or lose 5$.",
       "FlavorText": "This one here's got kind of a Brad Pit thing going only not quite as gay.",
       "FlavorCharacter": "Georgie"
     },
@@ -125,7 +125,7 @@
       "Number": 16,
       "Title": "Fix",
       "Traits": [ "Opportunity", "Sons of Anarchy" ],
-      "Text": "Darby is cooking meth for Zobelle in a lab in the woods. Commit 3 dudes (2+ members) to blow up the lab to steal 3 contraband and gain 2 heat.",
+      "Text": "Darby is cooking meth for Zobelle in a lab in the woods. Commit 3 dudes (2+ members) to blow up the lab to steal 3 contraband and gain 1 heat.",
       "FlavorText": "Are you talking about deliberately bringing drugs into my town?",
       "FlavorCharacter": "Hale"
     },
@@ -133,7 +133,7 @@
       "Number": 17,
       "Title": "Eureka",
       "Traits": [ "Threat", "Law enforcement" ],
-      "Text": "Tig gets kidnapped by bounty hunters for an outstanding warrant. Fight 3 bounty hunters or lose 1 member.",
+      "Text": "Tig gets kidnapped by bounty hunters for an outstanding warrant. Fight 2 bounty hunters or lose 1 member.",
       "FlavorText": "What are you hittin' me for? I was cooperatin'.",
       "FlavorCharacter": "Tig"
     },
@@ -173,7 +173,7 @@
       "Number": 22,
       "Title": "Fa Guan",
       "Traits": [ "Favour", "Law Enforcement" ],
-      "Text": "SAMCRO overwhelms judge Franklin, tie him up and threaten to destroy the letters from his wife. Commit 3 members to gain this favour.",
+      "Text": "SAMCRO overwhelms judge Franklin, tie him up and threaten to destroy the letters from his wife. Commit 3 dudes to gain this favour.",
       "FlavorText": "You low life junkie piece of shit! Your mother would be disgusted.",
       "FlavorCharacter": "Judge Franklin"
     },
@@ -181,7 +181,7 @@
       "Number": 23,
       "Title": "Balm",
       "Traits": [ "Opportunity", "Wahewa" ],
-      "Text": "SAMCRO finds out that the Indians are making bullets. Commit 3 dudes to gain 5 guns. Send 1 member to the hospital afterwards.",
+      "Text": "SAMCRO finds out that the Indians are making bullets. Commit 3 dudes (1+ members) to gain 5 guns. Send 1 member to the hospital afterwards.",
       "FlavorText": "Good. I can feel it. It wants to cure me. It's cool and warm at the same time. It's coorm!",
       "FlavorCharacter": "Half-Sack"
     },
@@ -196,8 +196,8 @@
     {
       "Number": 25,
       "Title": "The Culling",
-      "Traits": [ "Opportunity", "L.O.A.N." ],
-      "Text": "SAMCRO and AB meet up for a fist fight. Weston brings weapons but can be \"convinced\" by Lin and the Niners to fight fair. Fight 5 AB. If you win, remove any 5 enemies.",
+      "Traits": [ "Threat", "L.O.A.N." ],
+      "Text": "SAMCRO and AB meet up for a fist fight. Fight 5 AB.",
       "FlavorText": "Fair's for losers. I'd rather win.",
       "FlavorCharacter": "Weston"
     },
@@ -205,7 +205,7 @@
       "Number": 26,
       "Title": "Na Trioblóidí",
       "Traits": [ "Threat", "", "IRA" ],
-      "Text": "Cameron kidnaps Abel and brings him to Ireland. Lose 2 orders until you find Abel (add card TODO to the story deck).",
+      "Text": "Cameron kidnaps Abel and brings him to Ireland. Lose 1 order until you find Abel (add card TODO to the story deck).",
       "FlavorText": "A son for a son seems about right.",
       "FlavorCharacter": "Cameron"
     }
