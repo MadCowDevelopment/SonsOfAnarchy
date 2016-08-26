@@ -7,7 +7,9 @@
       "Traits": [ "Threat", "Mayans" ],
       "Text": "The Mayans burn down your gun warehouse. Gain 2 heat, you cannot sell guns.",
       "FlavorText": "Two in the back of the head. Quick and painless",
-      "FlavorCharacter": "Clay"
+      "FlavorCharacter": "Clay",
+      "Season": 1,
+      "Episode": 1
     },
     {
       "Number": 2,
@@ -15,7 +17,9 @@
       "Traits": [ "Threat", "Charming" ],
       "Text": "Deputy chief David Hale investigates the warehouse explosion. Every time you exploit for guns, gain 1 heat.",
       "FlavorText": "Those two dead Mexicans in the warehouse hole. I was hitting them.",
-      "FlavorCharacter": "Tig"
+      "FlavorCharacter": "Tig",
+      "Season": 1,
+      "Episode": 2
     },
     {
       "Number": 3,
@@ -23,15 +27,19 @@
       "Traits": [ "Favour", "Law enforcement" ],
       "Text": "Elliot Oswald's daughter has been raped by a carny. If you commit 3 members to finding the rapist, keep this as a favour.",
       "FlavorText": "We'll find the sick bastard.",
-      "FlavorCharacter": "Clay"
+      "FlavorCharacter": "Clay",
+      "Season": 1,
+      "Episode": 3
     },
     {
       "Number": 4,
       "Title": "Patch Over",
       "Traits": [ "Opportunity", "Threat", "Mayans" ],
-      "Text": "Commit 3 dudes to patch over the Devil's Tribe and fight D6 Mayans (unless they owe you). If you win, gain 2 members and 1 prospect.",
+      "Text": "Commit 3 dudes to patch over the Devil's Tribe and fight 3 mayans. If you win, gain 2 members and 1 prospect.",
       "FlavorText": "I'm gonna dunk my balls in your mouth. You're gonna gag. I'm gonna laugh. We'll be best friends forever.",
-      "FlavorCharacter": "Tig"
+      "FlavorCharacter": "Tig",
+      "Season": 1,
+      "Episode": 4
     },
     {
       "Number": 5,
@@ -39,7 +47,9 @@
       "Traits": [ "Favour", "Charming" ],
       "Text": "Gemma hosts a town fundraiser. Commit 3 dudes to gain the town's favour.",
       "FlavorText": "You know that fried shit's gonna kill you?",
-      "FlavorCharacter": "Gemma"
+      "FlavorCharacter": "Gemma",
+      "Season": 1,
+      "Episode": 5
     },
     {
       "Number": 6,
@@ -47,23 +57,29 @@
       "Traits": [ "Threat", "Law enforcement" ],
       "Text": "Nate Meineke ambushes a prison convoy and kills 3 people with your guns. Gain 2 heat and lose 3 weapons.",
       "FlavorText": "You so much as flash a pretty grin at him, I will jam my fist so far up your bony ass, your cup size will double.",
-      "FlavorCharacter": "Gemma"
+      "FlavorCharacter": "Gemma",
+      "Season": 1,
+      "Episode": 6
     },
     {
       "Number": 7,
       "Title": "Half Sack, Full Punch",
       "Traits": [ "Opportunity", "Sons of Anarchy" ],
-      "Text": "Half-Sack competes in a bare-knuckle box fight. You can bet up to 5$ and roll a D6. Double your bet on a 4 or higher.",
+      "Text": "Half Sack competes in a bare-knuckle box fight. You can bet up to $5 and roll a D6. Double your bet on a 4 or higher.",
       "FlavorText": "Go on, get out of here, before I rape both of you.",
-      "FlavorCharacter": "Tig"
+      "FlavorCharacter": "Tig",
+      "Season": 1,
+      "Episode": 7
     },
     {
       "Number": 8,
       "Title": "The Pull",
       "Traits": [ "Opportunity", "Sons of Anarchy" ],
-      "Text": "Commit 3 members to steal back a tanker from the Nords to gain 4$. Then you may pay 6$ to get 6 guns from the Irish.",
+      "Text": "Commit 3 members to steal back a tanker from the Nords to gain $4. Then you may pay $4 to get 4 guns from the Irish.",
       "FlavorText": "Why am I looking at one of Oswald's tanker's?",
-      "FlavorCharacter": "Unser"
+      "FlavorCharacter": "Unser",
+      "Season": 1,
+      "Episode": 8
     },
     {
       "Number": 9,
@@ -71,15 +87,19 @@
       "Traits": [ "Sons of Anarchy" ],
       "Text": "Jax killed Agent Kohn and has to get rid of the body. Lose 1 order. You also can't patch in and recruit.",
       "FlavorText": "Blood came in every shade of life.",
-      "FlavorCharacter": "John Teller"
+      "FlavorCharacter": "John Teller",
+      "Season": 1,
+      "Episode": 9
     },
     {
       "Number": 10,
       "Title": "Better Half",
       "Traits": [ "Threat", "Law enforcement" ],
-      "Text": "ATF raids Cara Cara. You cannot skim money from any location.",
+      "Text": "ATF raids Caracara. You cannot skim money from any location.",
       "FlavorText": "I'm gonna bury these assholes.",
-      "FlavorCharacter": "Agent Stahl"
+      "FlavorCharacter": "Agent Stahl",
+      "Season": 1,
+      "Episode": 10
     },
     {
       "Number": 11,
@@ -87,7 +107,9 @@
       "Traits": [ "Threat", "Law enforcement" ],
       "Text": "Bobby is arrested for Brian Hefner's murder. At the same time Opie is held by the FEDs. Put two members in prison.",
       "FlavorText": "He'd never sell out the club.",
-      "FlavorCharacter": "Jax"
+      "FlavorCharacter": "Jax",
+      "Season": 1,
+      "Episode": 11
     },
     {
       "Number": 12,
@@ -95,31 +117,39 @@
       "Traits": [ "Threat", "Sons of Anarchy" ],
       "Text": "Opie's wife Donna is shot by Tig. Lose 1 member and 1 gun.",
       "FlavorText": "Let me borrow your cell. I got to check in with Donna.",
-      "FlavorCharacter": "Opie"
+      "FlavorCharacter": "Opie",
+      "Season": 1,
+      "Episode": 12
     },
     {
       "Number": 13,
       "Title": "The Revelator",
       "Traits": [ "Threat", "Sons of Anarchy" ],
-      "Text": "Piney wants to take revenge for Donna's death. Commit 2 dudes (1+ members) and pay 3$ or lose 1 member and 1 prospect.",
+      "Text": "Piney wants to take revenge for Donna's death. Commit 2 dudes (1+ members) or lose 1 member and 1 prospect.",
       "FlavorText": "The Niners came gunning for my son. They killed my daughter-in-law.",
-      "FlavorCharacter": "Piney"
+      "FlavorCharacter": "Piney",
+      "Season": 1,
+      "Episode": 13
     },
     {
       "Number": 14,
       "Title": "Albification",
       "Traits": [ "Threat", "L.O.A.N." ],
-      "Text": "Gemma gets gang raped by AJ Weston and his associates. To cover it up she crashes her car. Lose 5$.",
+      "Text": "Gemma gets gang raped by AJ Weston and his associates. To cover it up she crashes her car. Lose $5.",
       "FlavorText": "So why don't you just climb back into your little German clown car and drive back to Nazi town...",
-      "FlavorCharacter": "Clay"
+      "FlavorCharacter": "Clay",
+      "Season": 2,
+      "Episode": 1
     },
     {
       "Number": 15,
       "Title": "Small Tears",
       "Traits": [ "Threat", "Georgie Caruso" ],
-      "Text": "Georgie Caruso is threatening the girls at Cara Cara into working for him. Fight 3 of his henchmen or lose 5$.",
+      "Text": "Georgie Caruso is threatening the girls at Caracara into working for him. Fight 3 of his henchmen or lose $7.",
       "FlavorText": "This one here's got kind of a Brad Pit thing going only not quite as gay.",
-      "FlavorCharacter": "Georgie"
+      "FlavorCharacter": "Georgie",
+      "Season": 2,
+      "Episode": 2
     },
     {
       "Number": 16,
@@ -127,7 +157,9 @@
       "Traits": [ "Opportunity", "Sons of Anarchy" ],
       "Text": "Darby is cooking meth for Zobelle in a lab in the woods. Commit 3 dudes (2+ members) to blow up the lab to steal 3 contraband and gain 1 heat.",
       "FlavorText": "Are you talking about deliberately bringing drugs into my town?",
-      "FlavorCharacter": "Hale"
+      "FlavorCharacter": "Hale",
+      "Season": 2,
+      "Episode": 3
     },
     {
       "Number": 17,
@@ -135,23 +167,29 @@
       "Traits": [ "Threat", "Law enforcement" ],
       "Text": "Tig gets kidnapped by bounty hunters for an outstanding warrant. Fight 2 bounty hunters or lose 1 member.",
       "FlavorText": "What are you hittin' me for? I was cooperatin'.",
-      "FlavorCharacter": "Tig"
+      "FlavorCharacter": "Tig",
+      "Season": 2,
+      "Episode": 4
     },
     {
       "Number": 18,
       "Title": "Smite",
       "Traits": [ "Threat", "L.O.A.N." ],
-      "Text": "Chibs prepares to move a minivan but a bomb goes off. Put 1 member in hospital and gain 1 heat.",
+      "Text": "Chibs prepares to move a minivan but a bomb goes off. Put 1 member in hospital, lose $1 and gain 1 heat.",
       "FlavorText": "When relationships become a ledger of profit and loss, you have no friends, no loved ones, just pluses and minuses.",
-      "FlavorCharacter": "John Teller"
+      "FlavorCharacter": "John Teller",
+      "Season": 2,
+      "Episode": 5
     },
     {
       "Number": 19,
       "Title": "Falx Cerebri",
       "Traits": [ "Threat", "L.O.A.N." ],
-      "Text": "SAMCRO mobilizes to attack Zobelle at a MCC meeting. The room is filled with Christian families and the Sheriffs arrest 4 dudes (2+ members).",
+      "Text": "SAMCRO mobilizes to attack Zobelle at a MCC meeting. The room is filled with Christian families and the Sheriffs arrest 3 dudes (2+ members).",
       "FlavorText": "You know, I don't give a shit what the plan is. I am tired of sitting here playing 'what happens if?'",
-      "FlavorCharacter": "Clay"
+      "FlavorCharacter": "Clay",
+      "Season": 2,
+      "Episode": 6
     },
     {
       "Number": 20,
@@ -159,15 +197,19 @@
       "Traits": [ "Opportunity", "Sons of Anarchy" ],
       "Text": "Opie attacks Lyla's drug dealer and takes away all his drugs. Commit 1 member to gain 3 contraband and 1 heat.",
       "FlavorText": "My son, he's given me a new pair of glasses. I find myself thinking about the things I do. Things I say, ramifications.",
-      "FlavorCharacter": "Jax"
+      "FlavorCharacter": "Jax",
+      "Season": 2,
+      "Episode": 7
     },
     {
       "Number": 21,
       "Title": "Potlatch",
       "Traits": [ "Threat", "L.O.A.N." ],
-      "Text": "SAMCRO is in a shootout with AB to take the Irish guns. Fight 4 aryans and gain 1 heat.",
+      "Text": "SAMCRO is in a shootout with AB to take the Irish guns. Fight 4 aryans. If you win, gain 4 guns. If you lose, send 4 dudes to the hospital.",
       "FlavorText": "I'm not the one murdering women!",
-      "FlavorCharacter": "Jax"
+      "FlavorCharacter": "Jax",
+      "Season": 2,
+      "Episode": 8
     },
     {
       "Number": 22,
@@ -175,7 +217,9 @@
       "Traits": [ "Favour", "Law Enforcement" ],
       "Text": "SAMCRO overwhelms judge Franklin, tie him up and threaten to destroy the letters from his wife. Commit 3 dudes to gain this favour.",
       "FlavorText": "You low life junkie piece of shit! Your mother would be disgusted.",
-      "FlavorCharacter": "Judge Franklin"
+      "FlavorCharacter": "Judge Franklin",
+      "Season": 2,
+      "Episode": 9
     },
     {
       "Number": 23,
@@ -183,7 +227,9 @@
       "Traits": [ "Opportunity", "Wahewa" ],
       "Text": "SAMCRO finds out that the Indians are making bullets. Commit 3 dudes (1+ members) to gain 5 guns. Send 1 member to the hospital afterwards.",
       "FlavorText": "Good. I can feel it. It wants to cure me. It's cool and warm at the same time. It's coorm!",
-      "FlavorCharacter": "Half-Sack"
+      "FlavorCharacter": "Half Sack",
+      "Season": 2,
+      "Episode": 10
     },
     {
       "Number": 24,
@@ -191,23 +237,159 @@
       "Traits": [ "Favour", "Law Enforcement" ],
       "Text": "Opie follows Stahl after finding out that she is behind Donna's death. Kill her to lose all heat or show mercy and keep this favour.",
       "FlavorText": "The next time you try to twist the truth, remember that the outlaw had mercy.",
-      "FlavorCharacter": "Opie"
+      "FlavorCharacter": "Opie",
+      "Season": 2,
+      "Episode": 11
     },
     {
       "Number": 25,
       "Title": "The Culling",
       "Traits": [ "Threat", "L.O.A.N." ],
-      "Text": "SAMCRO and AB meet up for a fist fight. Fight 5 AB.",
+      "Text": "SAMCRO and AB meet up for a fist fight. Send (not commit) all members to fight 5 AB.",
       "FlavorText": "Fair's for losers. I'd rather win.",
-      "FlavorCharacter": "Weston"
+      "FlavorCharacter": "Weston",
+      "Season": 2,
+      "Episode": 12
     },
     {
       "Number": 26,
       "Title": "Na Trioblóidí",
-      "Traits": [ "Threat", "", "IRA" ],
-      "Text": "Cameron kidnaps Abel and brings him to Ireland. Lose 1 order until you find Abel (add card TODO to the story deck).",
+      "Traits": [ "Threat", "IRA" ],
+      "Text": "Cameron kidnaps Abel and brings him to Ireland. Lose 1 member and lose 1 base order until card #37.",
       "FlavorText": "A son for a son seems about right.",
-      "FlavorCharacter": "Cameron"
+      "FlavorCharacter": "Cameron",
+      "Season": 2,
+      "Episode": 13
+    },
+    {
+      "Number": 27,
+      "Title": "SO",
+      "Traits": [ "Calaveras" ],
+      "Text": "A drive by happens at Half Sack's wake. Hale gets run over and several innocents are wounded. Lose a favor and send 1 member to jail.",
+      "FlavorText": "TODO",
+      "FlavorCharacter": "TODO",
+      "Season": 3,
+      "Episode": 1
+    },
+    {
+      "Number": 28,
+      "Title": "Oiled",
+      "Traits": [ "Favour", "Bounty hunter" ],
+      "Text": "Commit 3 dudes (2+ members) to help bounty hunter Serg to bring in a high risk bounty to gain this favour.",
+      "FlavorText": "TODO",
+      "FlavorCharacter": "TODO",
+      "Season": 3,
+      "Episode": 2
+    },
+    {
+      "Number": 29,
+      "Title": "Caregiver",
+      "Traits": [ "Lin", "Caracara" ],
+      "Text": "Henry Lin will only sell you guns if you borrow the Caracara girls to him. You cannot exploit for guns and skim porn sites.",
+      "FlavorText": "TODO",
+      "FlavorCharacter": "TODO",
+      "Season": 3,
+      "Episode": 3
+    },
+    {
+      "Number": 30,
+      "Title": "Home",
+      "Traits": [ "Favour", "Sons of Anarchy" ],
+      "Text": "SAMCRO got involved in a gunfight between a drug dealer and a gong of tweakers. Fight 3 enemies to gain this favour.",
+      "FlavorText": "TODO",
+      "FlavorCharacter": "TODO",
+      "Season": 3,
+      "Episode": 4
+    },
+    {
+      "Number": 31,
+      "Title": "Turning and Turning",
+      "Traits": [ "Threat", "Calaveras" ],
+      "Text": "Juice meets with the paranoid \"Chicken Man\" but gets jumped by Salazar and two other Calaveras. Lose 1 member.",
+      "FlavorText": "TODO",
+      "FlavorCharacter": "TODO",
+      "Season": 3,
+      "Episode": 5
+    },
+    {
+      "Number": 32,
+      "Title": "The Push",
+      "Traits": [ "TODO", "TODO" ],
+      "Text": "The Sheriffs raid the SAMCRO clubhouse. Lose all contraband. If you lost any contraband also gain 2 heat.",
+      "FlavorText": "TODO",
+      "FlavorCharacter": "TODO",
+      "Season": 3,
+      "Episode": 6
+    },
+    {
+      "Number": 33,
+      "Title": "Widening Gyre",
+      "Traits": [ "TODO", "TODO" ],
+      "Text": "TODO",
+      "FlavorText": "TODO",
+      "FlavorCharacter": "TODO",
+      "Season": 3,
+      "Episode": 7
+    },
+    {
+      "Number": 34,
+      "Title": "TODO",
+      "Traits": [ "TODO", "TODO" ],
+      "Text": "TODO",
+      "FlavorText": "TODO",
+      "FlavorCharacter": "TODO",
+      "Season": 3,
+      "Episode": 8
+    },
+    {
+      "Number": 35,
+      "Title": "TODO",
+      "Traits": [ "TODO", "TODO" ],
+      "Text": "TODO",
+      "FlavorText": "TODO",
+      "FlavorCharacter": "TODO",
+      "Season": 3,
+      "Episode": 9
+    },
+    {
+      "Number": 36,
+      "Title": "TODO",
+      "Traits": [ "TODO", "TODO" ],
+      "Text": "TODO",
+      "FlavorText": "TODO",
+      "FlavorCharacter": "TODO",
+      "Season": 3,
+      "Episode": 10
+    },
+    {
+      "Number": 37,
+      "Title": "TODO",
+      "Traits": [ "TODO", "TODO" ],
+      "Text": "TODO",
+      "FlavorText": "TODO",
+      "FlavorCharacter": "TODO",
+      "Season": 3,
+      "Episode": 11
+    },
+    {
+      "Number": 38,
+      "Title": "TODO",
+      "Traits": [ "TODO", "TODO" ],
+      "Text": "TODO",
+      "FlavorText": "TODO",
+      "FlavorCharacter": "TODO",
+      "Season": 3,
+      "Episode": 12
+    },
+    {
+      "Number": 39,
+      "Title": "TODO",
+      "Traits": [ "TODO", "TODO" ],
+      "Text": "TODO",
+      "FlavorText": "TODO",
+      "FlavorCharacter": "TODO",
+      "Season": 3,
+      "Episode": 13
     }
   ],
   "Width": 56,
