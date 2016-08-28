@@ -1,5 +1,5 @@
 var request = new XMLHttpRequest();
-request.open("GET", "js/cardset.json", false);
+request.open("GET", "cards/cardset.json", false);
 request.send(null);
 var CARDSET = JSON.parse(request.responseText);
 
