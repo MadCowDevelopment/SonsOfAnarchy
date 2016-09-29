@@ -18,7 +18,15 @@ var selectedCards = shuffledCards.slice(0, numberofRounds).sort(function (a, b) 
 for (var index = 0; index < selectedCards.length; index++) {
     var element = selectedCards[index];
     var spawns = Math.ceil((index + 1) / 4) + 1;
-    pages.push(new TileGamePage(index + 1, spawns));
+    var availableTileIndices = [];
+    var numberOfAvailableTiles = Math.min(index + 3, 9);
+    for (var i = 0; i < numberOfAvailableTiles; i++) {
+        availableTileIndices.push(i);
+    }
+    availableTileIndices = utils.shuffle(availableTileIndices);
+    for (var i = 0; i < spawns; i++) {
+        pages.push(new TileGamePage(index + 1, availableTileIndices[i]));
+    }
     pages.push(new StoryPage(index + 1, element.Number));
 }
 

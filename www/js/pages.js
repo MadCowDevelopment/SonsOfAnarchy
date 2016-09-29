@@ -22,14 +22,18 @@ function TitlePage() {
 }
 TitlePage.prototype = Object.create(Page.prototype);
 
-function TilePage(title, text, numberOfActiveTiles, numberOfSelectedTiles) {
+function TilePage(title, text, numberOfActiveTiles, numberOfSelectedTiles, tileIndex) {
     var self = this;
     this.activeTiles = [];
     this.selectedTiles = [];
 
     initializeActiveTiles(numberOfActiveTiles);
-    initializeSelectedTiles(numberOfSelectedTiles);
 
+    if(numberOfSelectedTiles === 0) {
+        initializeSelectedTile(tileIndex);
+    } else {
+        initializeSelectedTiles(numberOfSelectedTiles);
+    }
 
     function initializeActiveTiles(numberOfActiveTiles) {
         if (numberOfActiveTiles > MAXIMUM_NUMBER_OF_TILES) {
@@ -48,6 +52,11 @@ function TilePage(title, text, numberOfActiveTiles, numberOfSelectedTiles) {
             var element = tilesToSelect[i];
             self.selectedTiles.push(element);
         }
+    }
+
+    function initializeSelectedTile(tileIndex) {
+        var tile = self.activeTiles[tileIndex];
+        self.selectedTiles.push(tile);
     }
 
     function resetTile(id, num) {
@@ -114,12 +123,12 @@ function TilePage(title, text, numberOfActiveTiles, numberOfSelectedTiles) {
 TilePage.prototype = Object.create(Page.prototype);
 
 function SetupPage() {
-    TilePage.call(this, "Setup", "Set up the game as usual and place 2 enemy dudes on each of the following spaces:", 3, 2);
+    TilePage.call(this, "Setup", "Set up the game as usual and place 2 enemy dudes on each of the following spaces:", 3, 2, 0);
 }
 SetupPage.prototype = Object.create(TilePage.prototype);
 
-function TileGamePage(round, spawns) {
-    TilePage.call(this, "Round " + round, "Place 1 dude on each of the highlighted tiles:", round + 3, spawns);
+function TileGamePage(round, tileIndex) {
+    TilePage.call(this, "Round " + round, "Place 1 dude on each of the highlighted tiles:", round + 3, 0, tileIndex);
 }
 TileGamePage.prototype = Object.create(TilePage.prototype);
 
