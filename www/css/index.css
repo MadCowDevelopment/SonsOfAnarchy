@@ -40,7 +40,7 @@ body {
     width:320px;                   /* text area width */
     text-align:center;
     padding:320px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-200px 0px 0px -160px;  /* offset vertical: half of image height and text area height */
+    margin:-290px 0px 0px -160px;  /* offset vertical: half of image height and text area height */
                                    /* offset horizontal: half of text area width */
 }
 
@@ -136,22 +136,37 @@ body {
     width:250px;                   /* text area width */
     text-align:center;
     padding:60px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-250px 0px 0px -125px;  /* offset vertical: half of image height and text area height */
+    margin:-255px 0px 0px -125px;  /* offset vertical: half of image height and text area height */
                                    /* offset horizontal: half of text area width */
 }
+.season-text {
+    font-size: 24px;
+    font-family:Carnevalee-Freakshow;
+}
+
 .tiles {
     position: absolute;
     left:50%;
     top:50%;
     margin:-100px 0px 0px -127px; 
 }
+.seasons {
+    position: absolute;
+    left: 20%;
+    width: 60%;
+}
+input[type=checkbox] {
+  transform: scale(2);
+}
+
 .continue {
+    display: none;
     position: absolute;
     left: 50%;
     top:100%;
     width: 240px;
     margin: -36px 0px 0px -120px;
-    text-align: center;
+    text-align: center;    
 }
 #story-card {
     display: block;
