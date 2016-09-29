@@ -152,7 +152,7 @@ function StoryPage(round, number) {
 StoryPage.prototype = Object.create(Page.prototype);
 
 function GameEndPage() {
-    Page.call(this, "title", "GAME OVER", function () { });
+    Page.call(this, "gameover", "GAME OVER", function () { });
 }
 GameEndPage.prototype = Object.create(Page.prototype);
 

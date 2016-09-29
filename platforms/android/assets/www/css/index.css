@@ -43,6 +43,19 @@ body {
     margin:-290px 0px 0px -160px;  /* offset vertical: half of image height and text area height */
                                    /* offset horizontal: half of text area width */
 }
+.gameover {
+    display: none;
+    background:url(../img/logo.png) no-repeat center top; /* 250px x 320px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:320px;                   /* text area width */
+    text-align:center;
+    padding:320px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-200px 0px 0px -160px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
 
 #title-header {
     font-size:42px;
@@ -62,16 +75,6 @@ body {
     padding:0px;
     text-align:center;
 	font-family:Carnevalee-Freakshow
-}
-
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .title {
-		background:url(../img/logo-small.png) no-repeat left center; /* 150px x 192px */
-        padding:75px 0px 75px 150px;  /* padding-top + padding-bottom + text area = image height */
-        margin:-96px 0px 0px -198px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
-    }
 }
 
 .event {
@@ -243,35 +246,6 @@ input[type=checkbox] {
     height:36px;  
     text-align: center;
     margin:110px 0px 0px -85px;
-}
-
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .page-heading {
-        left:25%;
-    }
-    .regular-text {
-        left: 25%;
-        top: 50%;
-        height: 300px;
-        width: 200px;
-		margin:-150px 0px 0px -100px;
-    }
-    .tiles {
-        position: absolute;
-        left:50%;
-        top:50%;
-        margin:-127px 0px 0px -0px; 
-    }
-
-    #story-card {
-        position:absolute;
-        left:75%;
-        top:50%;
-        width:212px;
-        height:329px;
-        margin:-164px 0px 0px -106px;
-    } 
 }
 
 .tile {

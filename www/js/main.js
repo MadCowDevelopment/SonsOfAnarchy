@@ -12,16 +12,24 @@ var inputElements = document.getElementById('season-select').getElementsByTagNam
 for (var index = 0; index < inputElements.length; index++) {
     var element = inputElements[index];
     if (element.type != 'checkbox') continue;
-    if(!availableSeasons.some(function (season) {
+    if (!availableSeasons.some(function (season) {
         return season === Number(element.value);
     })) element.setAttribute("disabled", "disabled");;
 }
 
 // Initialize pages
-var pages = [
-    new TitlePage(),
-    new SetupPage()];
+function initializePages() {
+    pages = [
+        new TitlePage(),
+        new SetupPage()
+    ];
+    pageIndex = 0;
+    return pages;
+}
+
 var pageIndex = 0;
+var pages = [];
+initializePages();
 
 // Setup navigation event handlers
 document.addEventListener("backbutton", onBackKeyDown, false);
@@ -35,6 +43,7 @@ window.onclick = function () {
     nextPage();
 };
 
+// Register season-select-form submit
 var form = document.getElementById('season-select-form');
 form.addEventListener('submit', startNewGame);
 
@@ -89,6 +98,15 @@ function getSelectedSeasons() {
     return selectedSeasons;
 }
 
+
+// Register restart-form submit
+var form = document.getElementById('restart-form');
+form.addEventListener('submit', restartGame);
+
+function restartGame(e) {
+    initializePages();
+}
+
 function nextPage() {
     if (pageIndex + 1 >= pages.length) return;
     changePage(pages[pageIndex + 1]);
@@ -114,6 +132,6 @@ function changePage(nextPage) {
 
 function updateContinueVisibility() {
     var continueDiv = document.getElementById('continue');
-    if (pageIndex === 0) continueDiv.setAttribute('style', 'display:none;');
+    if (pageIndex === 0 || pageIndex == pages.length - 1) continueDiv.setAttribute('style', 'display:none;');
     else continueDiv.setAttribute('style', 'display:block;');
 }
