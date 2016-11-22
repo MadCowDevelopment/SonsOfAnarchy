@@ -14,7 +14,7 @@ for (var index = 0; index < inputElements.length; index++) {
     if (element.type != 'checkbox') continue;
     if (!availableSeasons.some(function (season) {
         return season === Number(element.value);
-    })) element.setAttribute("disabled", "disabled");;
+    })) element.setAttribute("disabled", "disabled");
 }
 
 // Initialize pages
